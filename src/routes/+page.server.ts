@@ -29,9 +29,9 @@ export const actions = {
 			return fail(400, form);
 		}
 
-    const id = Math.random().toString().slice(2);
-    console.log(id);
-		const user = { ...form.data, id  };
+		const id = Math.random().toString().slice(2);
+		console.log(id);
+		const user = { ...form.data, id };
 
 		form.data = user;
 		return message(form, 'User created!');
